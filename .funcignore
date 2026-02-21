@@ -2,7 +2,6 @@ local.settings.json
 .venv/
 __pycache__/
 *.pyc
-.python_packages/
 .git/
 .gitignore
 .github/
