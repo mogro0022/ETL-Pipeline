@@ -11,7 +11,7 @@ def save_to_datalake(raw_data: list, series_id: str, connection_string: str) -> 
 
     container_client = blob_service_client.get_container_client("raw-data")
 
-    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
     blob_name = f"{series_id}_{timestamp}.json"
 
     blob_client = container_client.get_blob_client(blob_name)
